@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="mao" type="Node2D"]
+
+[node name="cartas" type="GridContainer" parent="."]
+margin_right = 457.0
+margin_bottom = 210.0
+custom_constants/vseparation = 39
+custom_constants/hseparation = 65
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
