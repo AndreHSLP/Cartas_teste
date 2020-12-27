@@ -17,12 +17,14 @@ func _ready():
 
 func atualizarLista(Players):
 	players=Players
+	print(players[0].name)
 
 
 func _on_AddCarta_pressed():
 	#SistemaJogo.darCarta(1,"Vermelho","A")
-	SistemaJogo.darCartaAleatoria("A")
-
+	SistemaJogo.darCartaAleatoria(players[$AddCarta/PlayerID.text.to_int()].infoP.name)
+	print(players[$AddCarta/PlayerID.text.to_int()].name)
+	
 remote func addCartaEmT(nome):
 	var cart=cartateste.instance()
 	for p in players:

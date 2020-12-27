@@ -46,7 +46,7 @@ func _connected_ok():
 	pass # Only called on clients, not server. Will go unused; not useful here.
 
 func _server_disconnected():
-	print("server morreu")
+	print("server saiu")
 	pass # Server kicked us; show error and abort.
 
 func _connected_fail():

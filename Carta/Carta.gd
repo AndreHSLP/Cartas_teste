@@ -13,9 +13,7 @@ func _ready():
 	$Label.text=name
 	$ImgCarta/Img.animation=cor
 	$ImgCarta/Img.frame=numero
-	#$ImgCarta/ImgCarta2.modulate=Color(randf(),randf(),randf())
-	#$ImgCarta/AnimatedSprite.frame=randi()%56
-	#print(name)
+
 
 	
 func _physics_process(delta):
@@ -33,3 +31,10 @@ func _on_Button_pressed():
 		dono.removeCarta(cor,numero)
 		queue_free()
 	pass # Replace with function body.
+
+
+# Carta aleatoria
+#func Aleatorio():
+#	$ImgCarta/ImgCarta2.modulate=Color(randf(),randf(),randf())
+#	$ImgCarta/AnimatedSprite.frame=randi()%56
+#	print(name)
