@@ -2,12 +2,14 @@ extends Panel
 
 var emcima = false
 
-var nome
-var efeito
-var dono
-var numero
 var cor
+var dono
+var efeito
 var local
+var nome
+var numero
+
+
 
 func _ready():
 	$Label.text=name
