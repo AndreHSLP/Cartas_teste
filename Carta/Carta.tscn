@@ -82,6 +82,17 @@ scale = Vector2( 0.692357, 0.665499 )
 frames = ExtResource( 3 )
 animation = "Especial"
 
+[node name="Label" type="Label" parent="."]
+margin_left = 0.378914
+margin_right = 40.3789
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Teste"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Button" type="Button" parent="."]
 margin_top = -0.215527
 margin_right = 64.0
@@ -93,14 +104,6 @@ custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 __meta__ = {
 "_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="."]
-margin_left = 0.378914
-margin_right = 40.3789
-margin_bottom = 14.0
-__meta__ = {
 "_edit_use_anchors_": false
 }
 

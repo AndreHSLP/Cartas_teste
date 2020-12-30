@@ -13,6 +13,7 @@ func _ready():
 	$Label.text=name
 	$ImgCarta/Img.animation=cor
 	$ImgCarta/Img.frame=numero
+	$Label.text=str(numero)+cor
 
 
 	
