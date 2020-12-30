@@ -5,10 +5,10 @@ var infoP
 var mao={"Vermelho":[],"Amarelo":[],"Verde":[],"Azul":[],"Especial":[]}
 
 var dono =false
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	#print(infoP)
-	pass # Replace with function body.
+	pass
 	
 	
 func _physics_process(delta):
@@ -27,7 +27,7 @@ func _on_Button_pressed():
 		rpc("sair")
 
 	print(infoP)
-	pass # Replace with function body.
+	pass
 	
 remote func sair():
 	queue_free()
@@ -47,13 +47,12 @@ func mudar():
 
 func addCarta(cor,n):
 	mao[cor].append(n)
-	print(cor,":",mao[cor])
+	#print(cor,":",mao[cor])
 
 func removeCarta(cor,n):
 	if mao[cor].find(n)==-1:
 		print("N:",n," Cor:",cor)
 		print("Não tem essa carta no baralho")
 		return
-		
 	var CartaIndex=mao[cor].find(n)
 	mao[cor].remove(CartaIndex)

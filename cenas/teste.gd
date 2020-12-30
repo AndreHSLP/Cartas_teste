@@ -23,7 +23,7 @@ func atualizarLista(Players):
 func _on_AddCarta_pressed():
 	#SistemaJogo.darCarta(1,"Vermelho","A")
 	SistemaJogo.darCartaAleatoria(players[$AddCarta/PlayerID.text.to_int()].infoP.name)
-	print(players[$AddCarta/PlayerID.text.to_int()].name)
+	#print(players[$AddCarta/PlayerID.text.to_int()].infoP.name)
 	
 remote func addCartaEmT(nome):
 	var cart=cartateste.instance()
