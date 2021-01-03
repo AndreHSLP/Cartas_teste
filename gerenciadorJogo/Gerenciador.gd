@@ -1,7 +1,7 @@
 extends Node
 
 var caminhoJogo : Node
-onready var player_scene = preload("res://player/Player.tscn")
+onready var playerScene = preload("res://player/Player.tscn")
 #############Multiplayer Teste################
 #const PORT = 27015
 #const MAX_PLAYERS = 5
@@ -24,9 +24,9 @@ onready var player_scene = preload("res://player/Player.tscn")
 
 
 #lista de Players
-var player_info = {}
+var playerInfo = {}
 # Informação de player
-var my_info = {name = "Nome", favorite_color = Color8(255, 0, 255) }
+var myInfo = {name = "Nome", favorite_color = Color8(255, 0, 255) }
 
 
 
@@ -77,12 +77,12 @@ var my_info = {name = "Nome", favorite_color = Color8(255, 0, 255) }
 #
 #
 func mudarInfo(Nome):
-	my_info.name=Nome
+	myInfo.name=Nome
 
 func criarPlayer():
 	var id=get_tree().get_network_unique_id()
-	var player=player_scene.instance()
-	player.Info(my_info)
+	var player=playerScene.instance()
+	player.Info(myInfo)
 	player.position=Vector2(100,300)
 #	player.set_network_master(id) #Função Multiplayer player
 	caminhoJogo.add_child(player)

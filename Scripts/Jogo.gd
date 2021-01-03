@@ -6,10 +6,6 @@ func _ready():
 	Gerenciador.criarPlayer()
 	addPlayer()
 
-
-
-
 func addPlayer():
 	$teste.atualizarLista($Player.get_children())
 	SistemaJogo.players=$Player.get_children()
-	

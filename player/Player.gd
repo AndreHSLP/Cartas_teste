@@ -1,7 +1,7 @@
 extends Node2D
 
-var podemudar=true
-var infoP
+var podeMudar=true
+var infoPessoal
 var mao={"Vermelho":[],"Amarelo":[],"Verde":[],"Azul":[],"Especial":[]}
 
 var dono =false
@@ -16,7 +16,7 @@ func _physics_process(delta):
 	pass
 	
 func Info(Info):
-	infoP=Info
+	infoPessoal=Info
 	$Button.text=Info.name
 
 
@@ -26,7 +26,7 @@ func _on_Button_pressed():
 		sair()
 		rpc("sair")
 
-	print(infoP)
+	print(infoPessoal)
 	pass
 	
 remote func sair():
@@ -39,11 +39,11 @@ func _on_Button2_pressed():
 	pass # Replace with function body.
 
 func mudar():
-	if podemudar:
+	if podeMudar:
 		$TextureRect.modulate= Color( randf(),randf(),randf(), 1 )
-		podemudar=false
+		podeMudar=false
 		yield(get_tree().create_timer(0.0),"timeout")
-		podemudar=true
+		podeMudar=true
 
 func addCarta(cor,n):
 	mao[cor].append(n)

@@ -1,6 +1,6 @@
 extends Panel
 
-var emcima = false
+var emCima = false
 
 var cor
 var dono
@@ -20,12 +20,12 @@ func _ready():
 
 	
 func _physics_process(delta):
-	if $Button.is_hovered() and !emcima:
+	if $Button.is_hovered() and !emCima:
 		$AnimationPlayer.play("Movimento")
-		emcima=true
-	if !$Button.is_hovered() and emcima:
+		emCima=true
+	if !$Button.is_hovered() and emCima:
 			$AnimationPlayer.play_backwards("Movimento")
-			emcima=false
+			emCima=false
 
 
 func _on_Button_pressed():

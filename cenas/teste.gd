@@ -5,7 +5,7 @@ extends Node
 # var a = 2
 # var b = "text"
 var players
-const cartateste=preload("res://Carta/Carta.tscn")
+const cartaTeste=preload("res://Carta/Carta.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -26,7 +26,7 @@ func _on_AddCarta_pressed():
 	#print(players[$AddCarta/PlayerID.text.to_int()].infoP.name)
 	
 remote func addCartaEmT(nome):
-	var cart=cartateste.instance()
+	var cart=cartaTeste.instance()
 	for p in players:
 #		print(p.infoP)
 		if p.infoP.name==nome:
